@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+
+:root {
+    --pink: rgb(251, 75, 175);
+    --green: rgb(31, 107, 79);
+    --blue: rgb(16, 16, 80);  
+    
+}
+
+body {
+    font-family: Bitcount, Arial, sans-serif;
+    padding: 30px;
+    background-color: var(--pink);
+    color: rgb(245, 195, 222);
+}
+
+#gameboard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0,0.5), rgba(0,0,0,0.5)), url("pond.jpg");
+    background-size: cover;
+    padding: 1rem;
+    overflow: hidden;
+     border-radius: 15px;
+}
+
+
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.lily-pad{
+    width: 70%;
+    height: 70%;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.tile.frog::after{
+    content:"";
+    background-image: url("treefrog.png");
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 40%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#position-text{
+    font-size: 20px;
+    
+}
+
+
